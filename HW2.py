@@ -22,7 +22,8 @@ print(splitInHalf("bbbbbcaaaaa"))
 # The string 'aabcde' contains duplicate characters and should return False.
 
 def uniqueChars(str):
-    count = Counter(str)
+    lowerStr = str.lower()
+    count = Counter(lowerStr)
     if (len(count) == len(str)):
         return True
     else:
