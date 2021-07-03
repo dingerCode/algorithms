@@ -14,6 +14,7 @@ def splitInHalf(str):
 
 
 print(splitInHalf("bbbbbcaaaaa"))
+print(splitInHalf('aabb'))
 
 
 # 2. Unique Characters in String.
@@ -22,12 +23,7 @@ print(splitInHalf("bbbbbcaaaaa"))
 # The string 'aabcde' contains duplicate characters and should return False.
 
 def uniqueChars(str):
-    lowerStr = str.lower()
-    count = Counter(lowerStr)
-    if (len(count) == len(str)):
-        return True
-    else:
-        return False
+    return len(str) == len(set(str))
 
 print(uniqueChars('abcde'))
 print(uniqueChars(('aabcde')))
