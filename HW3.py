@@ -6,9 +6,10 @@ from itertools import permutations
 # Reversed string = easy is it before hard is Everything
 
 def stringReversal(s):
-    myList = s.split(" ")
-    rList = myList[::-1]
-    return " ".join(rList)
+    wordList = s.split()
+    wordList.reverse()
+    reversedSentence = " ".join(wordList)
+    return reversedSentence
 
 
 print(stringReversal('Everything is hard before it is easy'))
@@ -38,7 +39,7 @@ def countChars(s):
             vowels += 1
         elif (i != " "):
             consonants += 1
-    print('Vowels: ' + str(vowels) + ' Consonants: ' + str(consonants))
+    return f'Vowels: {vowels}, Consonants: {consonants}'
 
 
-countChars("hello world")
+print(countChars("hello world"))
